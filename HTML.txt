@@ -1,0 +1,148 @@
+
+---> Date : 7/10/26
+
+--->  ServiceNow Development intro
+
+ -- HTML : Hypertext markuplanguage 
+           Which gives the structure to our web pages
+
+           ex : House sketch
+ 
+ -- CSS  :  Cascading style sheet
+            Decorating the  page and adding some styles 
+
+            ex :  Painting the house / building the rooms of different sizes
+
+
+
+ -- JS   :  JavaScript 
+           
+           making the pages interactive by writting some logics and performing some actions
+
+           ex : Lights turn on / off  
+         
+
+
+
+---> IDE -- Setting up an environment where we can practice and write our code
+
+     -- (Integrated Development Environment) -- VScode
+
+---> HTML (Hypertext Markup language) 
+
+  -- It's not a programming language  and it is a markup language
+
+   --> What is programming language  ?
+    
+     -- writting the conditions and checking the conditions /A set  of instructions
+
+ --> What is a Markup language ? 
+     
+     --Giving the structure to a page 
+     
+---> Features of HTML : 
+    
+    -- Light weight 
+    -- we use it for web Development
+    -- CSS references
+    -- JS references
+    -- readability
+    -- Everything is written in the form of tags 
+     
+---> HTML Structure : 
+      
+      Html is decalred using the two tags 
+      <>- angular/Open angualr
+       <>--open tag / open agular bracket
+       </>--close tag / closed angular bracket
+     
+     <!DOCTYPE = html > --- it tells the browser the document type is html
+          
+          <html> -- entry gate / root element
+
+          <head> -- it will stores the internal information about the page
+                     We can write the referenceses of the CSS ,JS
+
+          </head>
+
+          <body> 
+                     -- it will dispaly the content over the page
+                
+          </body>
+     </html> -- ending the root
+     
+
+--> NOTE : Make sure the files are stored with the .html extenstion
+
+  -->HTML element  : it gives the complete information / structrue of a tag
+       
+       <h1>Welcome SN development</h1>
+    
+   --> Heading tags -- h1 to h6 
+     --It will add bold text with some specified sizes
+
+  --> Paragraph tag -- to add the description , some deatils about the heading 
+
+     <p>Content</p>
+
+     --Lorem -- it will add duplicate words into content
+
+
+--> Date : 9/10/26
+
+     --> img-- it will allow the user to populate or display the image over the pages
+ 
+      -- structure : 
+       
+          <img src="pasting the destination of the image">
+
+       src  attribute-> source attribute
+
+       Html attribute -- gives only some information about the destination
+
+       alt attribute --> Alternative attribute which allow the user to display some text over the page 
+                when the is not dispalyed/loaded properly
+
+     --> Anchor tag  -- it allow the browser to create a hyperlink between two pages 
+                        and it consists of a attribute href where we are pasting our destination 
+                         address
+     -- Structure :
+             <a href="paste the url of your destination">clickable text</a>
+
+
+----> Creating the  Incident table using the HTML 
+
+     --> <table> </table> -- which gives the structure to the table
+      
+        --><tr></tr> -- to create rows inside the table
+         --> <th></th> -- table column names 
+         --> <td></td> --  using this table data tag to add the data to the fields
+
+         --> Create a INC Table with number , category , priority , short description
+            
+
+---> Creating the list of incident records using Html ordered and unordered list
+
+
+       --> <ol></ol> -- ordered list 
+        --><ul></ul> -- unordered list
+
+--- <li></li> -- list items ddclared in btw the ol and ul
+
+
+
+---> Creating a form by using HTML 
+
+  --> <form> </form> -- gives the structure of the form 
+    
+    -- <label>labelname</label> -- it allow to give a name to the fields
+
+    --- <input type="text"> -- it allows user to enter the data based on the type
+
+    --- <button>Button name</button> -- it allows the user to create a button on the form
+
+
+
+    ---- create form that should contain Number , Name , priority , shortdescription
+
+    

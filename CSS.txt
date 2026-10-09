@@ -1,0 +1,20 @@
+
+
+---> Date : 9/10/26
+    
+    --> CSS Introduction 
+    
+    --> what is CSS ?
+       
+       -- Cascading stylesheet - it is used to decorate the html page 
+           in css everything is in the form of property and each 
+           property as some value we call it as property value
+       
+       -- CSS can be written in 3 ways 
+        
+        1.Inline CSS 
+
+        2.Internal CSS
+
+        3.External CSS
+        
