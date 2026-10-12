@@ -1,0 +1,30 @@
+
+
+---> Date : 12/10/26
+
+  ---> Intro to Javascript : 
+     
+     --> What is JavaScript : 
+         
+         Logic which does action over a page 
+
+         --> JavaScript is not a programming language it's a scripting language (server side & client side) 
+         -->JavaScript can be written in two ways 
+           
+            --Internal JavaScript : Internal  logic is declared inside the HTML body using script tags
+                <script></script>
+           
+            --External JavaScript : External logic is  written in a separate file and that file should be stored with 
+                                    .js extenstion
+
+                this file should linked with the html page by using link tag or script(which is defined after body) 
+            
+
+    --> console.log("Welcome to js"); -- this is the output statement/printing statement in javascript
+     -- print this on my console
+
+
+
+      
+                       
+     

@@ -1,0 +1,15 @@
+ h1 {
+                        color:rgb(119, 220, 72);
+                        background-color: black; 
+                        text-align: center;
+
+                     } 
+        body{
+            background-color: rgb(14, 45, 66);
+            /*background-image: url("snimage.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed; */
+        }
+        

@@ -12,9 +12,53 @@
        
        -- CSS can be written in 3 ways 
         
-        1.Inline CSS 
+        1.Inline CSS  : Writing the css inside the html element by using style attribute
 
-        2.Internal CSS
+        2.Internal CSS : here  we are using <style></style>  tag to decalre css and it is  written inside the head tag
 
-        3.External CSS
+         syntax : 
+                  
+                   <head>
+                   <style>
+
+                   h1 {
+                        color:rgb(119, 220, 72);
+                        background-color: black; 
+                        text-align: center;
+
+                     } 
+
+                   </style>
+                   </head>
+
+        3.External CSS : we are creating a file in that we will be writing the css / decalring the CSS
+                         and that file must be stored with the .css extention 
+             That css file should be linked with html page then only the style is added to the page
+              by using 
+              
+         ---> Syntax :
+
+               <link  rel="stylesheet" href="Myfrstpage.css">
+
+
+
+---> Properties in css : 
+       
+     the change which we want to apply on the pages 
+
+     --> Properties values : 
+       the value which adds the style to the page
+        
+      --> Color property : which adds the color to the html element content 
+      --> background-color :  which adds the background color to the patricular selected element
+      --> text-align : which display the content  -- center , top , bottom, right , left
+      --> background-image : Which set the background images on our page
+
+
+
+
+
+
+
+
         
