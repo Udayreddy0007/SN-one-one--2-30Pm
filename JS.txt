@@ -23,7 +23,150 @@
     --> console.log("Welcome to js"); -- this is the output statement/printing statement in javascript
      -- print this on my console
 
+---> Date : 13/10/26
 
+ --> Printing statements on the servicenow platform are gs.info , gs.print
+
+
+
+ ---> What is a data ?
+          
+    -- a piece of information is called as data
+       
+       ex: Name , ID , City 
+
+  --> Data types : it will define the type of the data
+
+   Name : "uday" -- String data type -- group of characters we call it as string  and if it is declared in between "" , ''
+   Id : "145AB" -- String 
+
+
+   ---> In JavaScript there are 5 data types they are : 
+      
+            1.Integer : numbers 
+            v  ex : phno : 9848513199;
+      
+          2.Decimal : a number which consists of 2 percision values 
+             ex : Marks = 9.50;
+      
+          3. Float : A number which consists of 1 percision values
+              ex : population = 1.4;
+      
+         4. Boolean : True / False - This data is mainly used to check the condition
+             ex : 
+              If age is less than 18 the person vote - False
+              If age is more than 18 the person can vote - True
+
+
+---> Variables : a variable is a container which stores different types of data under a name / Variable Name
+  
+    -- Variable Name : the name  which is defined by user to store the data of different data types
+
+        ex : 
+                  employeeName = "Swathi";
+   
+---> Rules of Variable Name  : 
+    
+      
+       -- A variable  name can  starts with a _(underscore)  or $ (doller)(except this symbol($) we wont consider  other special symbols)
+       -- A variable name cannot starts with numbers
+         
+         ex : 1emp = "swathi"; -- we dont consider this 
+       
+       -- A variable name may consists of numbers
+            
+            ex : em1 ="uday";
+                 e_m1 ="uday";
+                 e$m1="uday";
+                 1_em$1 ="uday";
+       -- default keywords cannot be considered as variable names
+          
+          ex : for , while , count , if
+
+---> JavaScript is a case sensitive language
+    
+    name ="uday"; 
+    Name ="uday";
+
+---> JavaScript use caseCase for naming Convention
+     
+     studentName = "uday";
+
+   
+     --- Variable keywords :
+                            In JS we have 3 variable keywords they are : 
+                             
+        1 . let - it is a block scope variable keyword we can declare the variable and update the value 
+                    but we cannot re-declare
+                     
+        2. const - it is also a block scope variable we can decalre once we cannot update and re-declare
+        
+        3. var - it is a  global scope  variable we can decalre update and re-declare
+
+    
+
+   Basic syntax ro store some value 
+     
+     variableKeyword variableName = data(Type of data);
+      cosnole.log(variableName);
+
+
+
+---> Operators in javascript :
+  
+  Operators are used to perform mathematics calculations , to check conditions
+
+   1. Operator -  it is a symbols that will define the operation
+   2.operand - it will hold some value on the left and the right of the Operator
+    ex : a + b -- a , b  operands and  + is operator
+    
+  ---> Arithematic operator :  we use to perform addition , substraction , division , modulo 
+        
+        (+ , - , * , / , % )
+  
+  
+  ---> Assignment operator / compound assignment operator:|It is a combination of assigmnet and arithematic Operators
+           
+     (=+ , =- , =/ , =* , =%)
+     
+     ex :
+          var a = 10;
+          a+=10; // 20
+          a-=5; // 15
+          a*=3; // 45
+         a/=5; //9
+         a%=3; // 0
+         console.log(a);
+ 
+  ---> Comparision operator : comapring the values 
+
+    (== , === , <= , >= ,  < , > , !=)
+
+       -- == : to compare two value
+
+           ex : 
+                  var a =15 ;
+                  b="15";
+                 console.log(a===b);
+                 // true
+
+       -- === :  we call it as exact comparison where the values and the data type is also checked
+
+          ex : 
+                var a =15 ;
+                 b="15";
+                console.log(a===b);
+                  // false
+
+
+    
+  ---> Logical operator : 
+ 
+    (&&(AND) , ||(OR) , !(NOT))
+
+  ---> increment and decrement : 
+            
+            ( ++ , -- )
 
       
                        
