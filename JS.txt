@@ -138,7 +138,7 @@
          a%=3; // 0
          console.log(a);
  
-  ---> Comparision operator : comapring the values 
+---> Comparision operator : comapring the values 
 
     (== , === , <= , >= ,  < , > , !=)
 
@@ -160,14 +160,293 @@
 
 
     
-  ---> Logical operator : 
+ ---> Logical operator : 
  
     (&&(AND) , ||(OR) , !(NOT))
 
-  ---> increment and decrement : 
+
+    -- && : It check both condition and give out put as true if and only if two conditions are True
+
+      ex : 
+              var hasId= true;
+              var doesntAddhar = false;
+              console.log(hasId&&doesntAddhar);
+
+  -- || : either one condition must be true then only the output is True
+
+       ex : 
+                var hasId= true;
+                var doesntAddhar = false;
+                console.log(hasId || doesntAddhar);
+   
+    -- ! : if the condition is  true  so the output is false 
+
+      ex : 
+                var hasId= true;
+                console.log(!hasId );
+
+---> increment and decrement : 
             
             ( ++ , -- )
 
+            increment : increment the original by 1(+1)
+
+               ex : 
+                    var a = 17;
+                    a++;  // a + 1 = 17 + 1 = 18
+                    console.log(a); 
+
+            decrement : decrement the original value by 1(-1)
+                 |
+              ex: 
+                          var a = 17;
+                          a--;  // a - 1 = 17 - 1 = 16
+                          console.log(a);
+
+  
+  ---> Conditional statements in JS : 
+        
+        --The logic/block is executed when the condition is satisified
+
+    1. if condition statement / if block(True block)
+
+       -- the block is executed only if the condition is True
+
+       syntax : 
+                 if(cond){
+
+                  // Statement is executed if the cond is true
+                 }
+
+        ex :
+                    var age = 18;
+                    if(age!=18&& age==18){
+                        console.log("The person is eligible to vote");
+                    }
+
+    2 . if else  : 
+     
+     -- the block is executed if the condition is true otherwise default(false) block is executed
+   
+      ex : 
+              var age = 18;
+              if(!age){
+                  console.log("The person is eligible to vote");
+              }
+              else{
+                  console.log("Invalid age");
+              }
+
+
+    3. else if --  
+
+     syntax : 
+                if(cond1)  // true block
+                {
+                   // True Statement
+                }   
+                else if(cond2){
+                  // false statement
+                }
+                else{ // default block
+                  
+                   // default statement
+                }
+
+        ex: 
+                var color ='black';
+                if(color!='black'){
+                    console.log("The selected color is not black");
+                }
+                else if(color=='black'){
+                
+                    console.log("The selected color is black");
+                }
+                else{
+                    cosole.log("Invalid color");
+                }
+
+    4.Nested else If : multiple else if conditions can be written
+
+      Syntax:
+               if(cond1)  // true block
+                {
+                   // True Statement
+                }   
+                else if(cond2){
+                  // false statement
+                }
+                else if(cond3){
+                  
+                  // false statement
+                }
+                else{ // default block
+                  
+                   // default statement
+                }
+
+          ex : 
+                var color ='black';
+                if(color!='black'){
+                    console.log("The selected color is not black");
+                }
+                else if(color=='black'){
+                
+                    console.log("The selected color is black");
+                }
+                else if(color=='green'){
+                
+                    console.log("The selected color is green");
+                }
+                    else if(color=='red'){
+                
+                    console.log("The selected color is red");
+                }
+                else if(color=='black' || color=='green'){
+                
+                    console.log("The user selected color  black in btw the black and green");
+                }
+                else{
+                    cosole.log("Invalid color");
+                }
+              
+    5. Nested if : Multiple true blocks
+      
+         syntax : 
+                 
+                 if(cond1){
+                  // stmt 1
+                 }
+                 if(cond2){
+                  // stmt 2
+                 }
+
+      ex : 
+              var color ='black';
+              if(color!='black'){
+                  console.log("The selected color is not black");
+              }
+              if(color=='black'){
+              
+                  console.log("The selected color is black");
+              }
+               if(color=='green'){
+              
+                  console.log("The selected color is green");
+              }
+              if(color=='red'){
+              
+                  console.log("The selected color is red");
+              }
+               if(color=='black' || color=='green'){
+              
+                  console.log("The user selected color  black in btw the black and green");
+              }
+
+
+    6.Switch :  in the switch we will be having the case
+
+        based on the expression we will be writing the cases
+
+        break is like it stop the execution where the condition is matched
+
+
+        Syntax : 
+              
+              var  a =1;
+              switch(a) {
+               
+                 case 1 : 
+                          // outputstatement;
+                          break;
+                  case2 : 
+                        //outputstatement2;
+                        break;
+                    
+                  default : 
+                        //defaultoutputstatement
+              }
+
+-- ex :  
+          var day =3;
+        switch(day)
+        {
+            case 1: 
+                 console.log('Monday');
+                break;
+            case 2 :
+                console.log('Tuesday');
+                break;
+            case 3 : 
+                 console.log('Wednesday');
+                break;
+            case 4 : 
+                console.log('Thursday');
+                break;
+            default:
+                console.log("Invalid day");
+                 
+        }
+        
+
+  ---> Looping control statements :
+      
+      --- The loop will iterate until the condition matchs
+
+    1. for loop   : the loop iterates until the stopping conditions is matched
+
+        i=0 is the initial condition -- the loop starts from here
+        i<=10 is the stopping condition -- the loop stops 
+        i++ the value is incremented
+
+     Syntax :
+
+         for(var i=0; i<=10; i++){
+          //output statement
+         } 
+          
+
+    2. while loop  : 
+           
+          the loop will check the condition and then execute the statement
+
+
+          syntax : 
+              
+              var i =1 ;
+              while(i<=10){
+                //output statement;
+                i++;
+              }
+
+              ex : 
+                         var i=1;
+                         while(i<=20){
+                             console.log(i);
+                             i++;
+                         }
+
+    3.dowhile loop : It execute the statement atlest once and at the last condition is checked
+
+     syntax : 
+                  var i=1;
+                  do{
+                    //output statement
+                  }
+                  while(i<=10);
+
+
+    ex:
+            var i=1;
+            do{
+                console.log(i);
+                i++;
+            }while(i<=20);
+
+  
+
+
+        
       
                        
      
