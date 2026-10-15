@@ -1,0 +1,19 @@
+
+---> Date : 15/10/26
+
+  --> SN scripting / Developement / Customization 
+
+    -- we have two types of Scripting 
+      
+       1. Client side / browser side  -- onLoad , onChange , onCellEdit , onSubmit
+
+       2 . Server side  / DB level / Server level
+         
+         --DML operations--Insert() , Update() , Delete() , Query() , Rollback
+
+          -- Glide API's -- GlideRecords , GlideAggregate(COUNT,MIN,MAX.AVG, SUM)
+
+          ---Business rules -- Before, After , Async , Display
+          -- GlideAjax , ScriptInclude
+
+        -- Now assit (AI development end to end )

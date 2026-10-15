@@ -443,6 +443,158 @@
                 i++;
             }while(i<=20);
 
+
+---> Date : 15/10/26
+
+
+    --- JavaScript Arrays : 
+       
+       -- Array is collection of similar data stored under a variable  name 
+          it is defined with the symbol []
+
+
+        ex : 
+                   var stdNames =['Uday','Swathi','Naveen','Venky'];
+                     console.log(stdNames);
+
+    -- index :  array index a numeric value which specifies  position of each value inside the Array
+
+              Arrayname[0] -- 0 is the position of the first name
+
+              ex : 
+                       var stdNames =['Uday','Swathi','Naveen','Venky'];
+                        console.log(stdNames[0]);
+
+    -- Array Length : 
+                   
+            if you want to know the length , the total no of data present in an array use
+            arrayname.length we get the total value
+
+          ex : 
+                var stdNames =['Uday','Swathi','Naveen','Venky'];
+                console.log(stdNames,length);
+
+
+---- if you want to find the indexes of each data stored in an array use for loop
+
+    ex : 
+              
+              var stdNames =['Uday','Swathi','Naveen','Venky','Sujeeth'];
+                for(var i=0; i<stdNames.length; i++){
+                    console.log(stdNames[i]+i);
+                    // you get teh values along with their index
+                    
+                }
+
+     
+
+
+----> Function in JS : 
+    
+     -- Function is a block of reusable code we call it as function 
+
+           --- it does some action when the code is executed 
+
+
+        2 types of function 
+
+        1. function without parameters / default function : 
+           it does some action but not returning any value
+
+           syntax :
+                   
+                    function add(){  // function functionName()
+                      a =10;
+                      b=20;
+                      console.log(a+b);
+                       }
+                      add();  // calling the functioName();
+
+        2. functions with parameters - it does some action and return some value
+
+
+         Syntax :  
+   
+                         function add(a , b){
+                         
+                             return a + b;
+                         }
+                         add(10 , 50);
+
+
+    --> Methods in JS
+       
+       -- Methods also does some action 
+
+          -- return  : return some value after the action
+
+          -- void : 
+
+                 function add(){  // function functionName()
+                      a =10;
+                      b=20;
+                      console.log(a+b);
+                       }
+                      add();  // calling the functioName();
+        
+
+  --> Class :
+          blue print  
+           
+
+---> Object  :
+          instance of class / real output
+
+
+          syntax : 
+              
+                var objectName = {
+                    parm1 : value1 , 
+                    parm2 : value2 
+                };
+                objectName.parm1;
+
+    example : 
+              var employee ={
+              empName : 'Swathi',
+              empCompany:'Acer',
+              empId :"14A5"
+          };
+          employee.empId;
+
+
+--->  Function vs Object : 
+     
+
+     syntax :  var objectName = {
+                    parm1 : value1 , 
+                    parm2 : value2 ,
+                    functionName : function(){
+                        console.log(this.parm1);
+                    }
+                };
+                objectName.functionName();
+        
+
+        Note : when a function is decalred inside the object it will become method
+
+         to access the object parameters from the method we have to this keyword
+          
+        this refers to object reference (instead of passing the object name will be using this keyword)
+
+
+
+
+
+            
+
+
+          
+           
+
+
+           
+
   
 
 
