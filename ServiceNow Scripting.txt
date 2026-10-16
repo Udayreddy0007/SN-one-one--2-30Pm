@@ -17,3 +17,75 @@
           -- GlideAjax , ScriptInclude
 
         -- Now assit (AI development end to end )
+
+
+
+  
+  ---> Client side :  managing the form behaviour 
+    
+     ---> We can write the client scripts in the client scripts table which is a module that belongs to system
+    
+       onLoad() : on loading the page / form it does some action
+        
+
+      --> glidemethods():
+
+        -- g_form(glide form) -- to access the form g_form
+        -- setMandatory (To make a field Mandatory)
+        -- setDisplay(to dispaly the field / hide field)
+        -- setVisible
+        -- setReadonly(by using this mehtod we can make a field readonly)
+        -- setValue(setting up the value in the fields)
+        -- addInfoMsg(it add a alert message inside the form)
+
+    
+
+  -- User case1 : As System admininstrator when my form loads i want to populate a alert
+
+      Script : 
+                 
+                function onLoad() {
+                    
+                    alert('welcome to incident form');
+                
+                }
+
+  -- User case2 : When the user open a new incident record i want to make description field  as mandatory 
+
+        Script : 
+                 
+                  
+
+
+       onChange() : it does some action when the particular field is changed
+
+           User case1:  As an admin when the category is selected to software set the subcategory to 
+                          email and if the category is hardware populate a msg on the form
+
+
+                  Script : 
+
+                           note : getValue it will fetch the value of the field   
+                              
+                         var cat = g_form.getValue('category');
+                         if(cat=='software'){
+	                      g_form.setValue('subcategory','email');
+                         }
+                         else if(cat=='hardware'){
+	                      g_form.addInfoMessage('the category has been selected to hardware');
+                         }
+
+
+      -- User case 2 : As an admin when the category is selected to software set the assignment group to software
+   
+                     Script : 
+                                 
+                                 if(newValue=='software'){
+	                                g_form.setValue('assignment_group','8a4dde73c6112278017a6a4baf547aa7');
+                                   }
+                                   else if(cat=='hardware'){
+	                                g_form.addInfoMessage('the category has been selected to hardware');
+                                   }
+       onSubmit()
+
+       onCellEdit()
