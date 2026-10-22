@@ -85,7 +85,64 @@
                                    }
                                    else if(cat=='hardware'){
 	                                g_form.addInfoMessage('the category has been selected to hardware');
-                                   }
-       onSubmit()
+                  
+                  
+                       }
 
-       onCellEdit()
+  --> Date : 22/10/26
+       
+       
+       --> onSubmit() : on submitting the form if you Want to block any user use on submit
+
+          return false - block the User
+          return true - allow the user to submit the form
+        
+            user case 1 :  When user tries to submit the form without filling the description
+
+
+            Script :
+                       function onSubmit() {
+                        //Type appropriate comment here, and begin script below
+                     
+                        var desc = g_form.getValue('description');
+                        if(desc==''){
+                     	g_form.addErrorMessage("Description should be filled manadatory");
+                     	return false; // block the user from submitting the form
+                     	
+                        }
+                        return true; // allow the user
+                        
+                     }
+                            
+
+       onCellEdit()  :  
+                    
+                    if ypu want to block the user from making the changes  from the cell level /  list level use 
+                    onCellEdit
+
+              User case1 :  i dont to alloe the user to change the shortdescription from the cell level 
+                
+                Script : 
+                   
+                           if(newValue==''){
+                          	alert("you cannot update the field");
+                          	callback(false);
+                          	return ;
+                          
+                          }
+                          callback(true);
+
+----> Server Side : We are fetching the data from the server / DB(table )  by writing a script  
+  
+     
+     ---> DML Operations (Data manpulation language)
+       
+       -- insert() -- creating the record , multiple records  (CR)
+      
+       --Update() -- Updating the field of single and multiple records(RW)
+
+       --Delete() -- Delete single record and also multiple records (RD)
+
+       -- Query()--Reading the data from the DB / Fetching the data  (R)
+
+       -- RollBack -- Reverting the changes 
