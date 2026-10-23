@@ -146,3 +146,114 @@
        -- Query()--Reading the data from the DB / Fetching the data  (R)
 
        -- RollBack -- Reverting the changes 
+
+
+
+---> Date : 23/10/26 
+
+    ---> Navigate to Script-background to write the server side scripts
+
+
+    ----> GlideRecord("table name") --
+
+    
+    ---> Insert() -- create a record / multiple records inside the 
+                      table without opening the table by executing the
+                      script 
+
+            syntax : 
+                      
+                      var variableName = new GlideRecord("table name") -- opening the table 
+                       variableName.initialize();
+                       variableName.filedName = "value";
+                       variableName.insert();
+                        gs.info("Successfully executed");
+
+
+
+        User case 1 : Create a record inside a table and fill the fields as well 
+
+           Script : 
+                     var gr=new GlideRecord('incident');
+                     gr.initialize();
+                     gr.short_description="Created the INC via a server script";
+                     gr.description="testing the glide record";
+                     gr.category="software";
+                     gr.state="2";
+                     gr.insert();
+                        
+         
+          User case 2 : Create a record inside a table along with that print the number of the record
+
+              Script : 
+                    
+                            var gr=new GlideRecord('incident');
+                            gr.initialize();
+                            gr.short_description="Created the INC via a server script";
+                            gr.description="testing the glide record";
+                            gr.category="software";
+                            gr.state="2";
+                            gr.insert();
+                            gs.info("Record has been created the NO is : "+gr.number);
+                    
+
+            User case 3 :  Create multiple records in incident table (20 records) and all records 
+                           with same field values 
+
+                    Script : 
+                         
+                            var gr = new GlideRecord('incident');
+                           for (var i = 1; i <= 20; i++) {
+                               gr.initialize();
+                               gr.short_description = "Created the INC via a server script";
+                               gr.description = "testing the glide record";
+                               gr.category = "software";
+                               gr.state = "2";
+                               gr.insert();
+                           }
+                           gs.info("Record has been created the NO is : " + gr.number);   
+
+                    
+              ---> Note : Dont decalre the intialixe before the for loop 
+                     why because it creates multiple records with same incident number
+                     Make sure it is decalred after the loop
+
+
+
+        User case 4 : Create multiple records with different shortdescription 10 Records
+
+             Script : 
+                    
+                    shortdescription =['email issue','network issue','server issue','instance issue','software issue','laptop isssue' ,'VPN connectivity issue','DB isssue','account issue','Wifi issue'];
+
+                     var gr = new GlideRecord('incident');
+                     for (var i = 1; i <= 10; i++) {
+                     	gr.initialize();
+                          gr.short_description=shortdescription[i];
+                         gr.insert();
+                     }
+                     gs.info("Record has been created the NO is : " + gr.number);
+
+
+    ---> Update () -- it allow the user to update the single and multiple records 
+
+        update()--operation for updating the single/multiple
+        updateMultiple()-Method is used to update the multiple records 
+         
+         ---> for single updation use if loop
+         ---> for multiple records updation use while loop
+
+         syntax :
+            
+              var variableName = new GlideRecord("table name") -- opening the table 
+               if(variableName.get("number/sys_id" ,"value"))
+                       variableName.filedName = "value";
+                       variableName.update();
+                       
+
+
+
+          User case 1 : As an admininstrator  i wants to update a record category and state field 
+
+            Script : 
+                       
