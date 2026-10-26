@@ -253,7 +253,121 @@
 
 
 
-          User case 1 : As an admininstrator  i wants to update a record category and state field 
+          User case 1 : As an administrator  i want to update a record category and state field 
 
-            Script : 
+            Script :
+                       var incUp = new GlideRecord('incident');
+                       if(incUp.get("sys_id","2d92ada2c300d31091fb1c84e4013185"))
+                       	incUp.state="1";
+                       	incUp.category="software";
+                       	incUp.update();
+
+
+---> Date : 26/10/26
+
+    --> Use case 2 :   As an administrator want to update all p1 incidents short Description
+
+       
+
+       Script : 
+                var incUp = new GlideRecord('incident');
+                incUp.addQuery("priority","1");
+                incUp.query();
+                incUp.short_description="Updayte multiple records operation testing"
+                	incUp.updateMultiple();
+
+
+            or 
+
+        Script : 
+                     var incUp = new GlideRecord('incident');
+                       incUp.addQuery("priority","1");
+                       incUp.query();
+                       while(incUp.next()){
                        
+                           incUp.short_description="Update multiple records operation testing"
+                       	incUp.update();
+                       }
+  
+
+  ---> Delete operation () : it'll delete a single as well as multiple records 
+   
+         
+         for single record deleation we use deleterecord()
+
+         for multiple records delation we use deleteMultiple()
+
+     
+     user case 1 :  i want to delete a record  
+      
+        script : 
+            
+                               var delInc = new GlideRecord('incident');
+                   if(delInc.get("sys_id","d1623670c3001f1091fb1c84e401313e")){
+                   	delInc.deleteRecord();
+                 }
+
+
+      user case 2 :  wanted to delete multiple record where prioriy is 1 
+         
+            script  : 
+                
+                var mulInc = new GlideRecord('incident');
+              mulInc.addQuery("priority","1");
+              mulInc.query();
+              mulInc.deleteMultiple();
+
+
+      User case 3 : get the count of active records  
+        
+
+        Script : 
+           
+            var countInc = new GlideRecord('incident');
+            countInc.addQuery("active",true);
+            countInc.query();
+            gs.info("The total no of records"+countInc.getRowCount());
+
+
+
+
+-----> Glide aggregate - it is a glide object which allow us to perform statistical operation on the tables 
+ 
+           we have few aggregate functions to perform the things  
+
+        1.COUNT - count function will give the count of records inside the table
+
+        Syntax : 
+            
+                 var  ga = new GlideAggregate('table_name');
+                 ga.addAggregate("COUNT");
+                 ga.applyfilter method(addQuery / addEncodedQuery);
+                 ga.query();
+                 if(ga.next()){
+
+                  var result = ga.getAggregate("COUNT");
+                  gs.info("The total no of records in the incident table "+result);
+                 }
+
+          
+        User case 1 : Count the no of active incidents  
+                    
+            script : 
+                
+                     var ga = new GlideAggregate('incident');
+                      ga.addAggregate("COUNT");
+                      ga.addQuery("active",true);
+                      ga.query();
+                      while(ga.next())
+                      {
+                      	gs.info("The total no of records in the table is  : "+ga.getAggregate("COUNT"));
+                      }
+
+
+        2.MIN   
+
+        3.MAX  
+
+        4. SUM  
+
+        5. AVG
