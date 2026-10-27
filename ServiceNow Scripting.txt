@@ -361,13 +361,116 @@
                       while(ga.next())
                       {
                       	gs.info("The total no of records in the table is  : "+ga.getAggregate("COUNT"));
-                      }
+                     }
+
+---> Date : 27/10/26
+
+          User case 2 : Get the count of priority records 
+            
+  
+                 Note :in this scenario we use groupBy to apply the filter on the field
+                       we get the each field value record count
+            Script :  
+                              var countPr = new GlideAggregate('incident');
+                                countPr.addAggregate('COUNT');
+                                countPr.groupBy('priority');
+                                countPr.query();
+                                while(countPr.next()){
+                                	var dis=countPr.getDisplayValue('priority');
+                                	var result=countPr.getAggregate('COUNT');
+                                	gs.info(dis +' : '+" "+result);
+                                }
+                   
 
 
-        2.MIN   
 
-        3.MAX  
+        2.MIN  -    to get the min value of a field(imp - the field must and should store the numeric data)
 
-        4. SUM  
+            User case 1 :  Finding the min cost of a ci 
 
-        5. AVG
+             setGroup(false) - it will control the groupBy 
+
+               script : 
+
+                    var minCost = new GlideAggregate('cmdb_ci');
+                     minCost.addAggregate('MIN','cost');
+                     minCost.setGroup(false);
+                     minCost.query();
+                     while(minCost.next()){
+                     	var result = minCost.getAggregate('MIN','cost');
+                     	gs.info("The minimum cost of a ci"+result);
+                     } 
+
+        3.MAX  - To find the maximum value we use max aggregate function 
+
+             Script : 
+
+                      var maxCost = new GlideAggregate('cmdb_ci');
+                       maxCost.addAggregate('MAX','cost');
+                       maxCost.setGroup(false);
+                       maxCost.query();
+                       while(maxCost.next()){
+                       	var result = maxCost.getAggregate('MAX','cost');
+                       	gs.info("The MAXimum cost of a ci"+result);
+                       } 
+
+        4. SUM   - To find total value / get the total we SUM 
+                  
+                  User case 1 : Find the total cost of ci's 
+                   
+                     Script : 
+                      
+                               var sumCost = new GlideAggregate('cmdb_ci');
+                                 sumCost.addAggregate('SUM','cost');
+                                 sumCost.setGroup(false);
+                                 sumCost.query();
+                                 while(sumCost.next()){
+                                 	var result = sumCost.getAggregate('SUM','cost');
+                                 	gs.info("The total cost of a ci"+result);
+                                 }
+
+        5. AVG  - To find the mid value  -- total cost  / total no of entities 
+         
+             
+              User case 1 :  Find the Avg cost of ci's 
+               
+                Script : 
+                   
+                         var AVGCost = new GlideAggregate('cmdb_ci');
+                         AVGCost.addAggregate('AVG','cost');
+                         AVGCost.setGroup(false);
+                         AVGCost.query();
+                         while(AVGCost.next()){
+                         	var result = AVGCost.getAggregate('AVG','cost');
+                         	gs.info("The Average cost of a ci - "+result);
+                         }
+
+---> Buisness rules in ServiceNow  : 
+     
+     is a server side script that executes automatically when a record is inserted , updated 
+      deleted or when a table is queried 
+       
+      -- In ServiceNow we have 4 types of business rules they are 
+       
+       1. Before :  The script is executed before the data is written/ saved to the  Database 
+
+
+          - User case 1 :  when the record is about to save into the database want to set the assignment group
+                      to software if  the category is selected to software 
+           
+           Before BR - insert / update 
+
+             Script : 
+                 
+                               	if(current.category=="software"){
+	              	current.assignment_group="3D8a4dde73c6112278017a6a4baf547aa7";
+	              }
+
+              
+
+
+       2. After : 
+
+       3. Async : 
+        
+       4. Display :
